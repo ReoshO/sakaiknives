@@ -1,6 +1,6 @@
 html {
- font-size: 10px; /* px means 'pixels': the base font size is now 10 pixels high  */
- font-family: 'Noto Serif JP', serif; /* this should be the rest of the output you got from Google fonts */
+ font-size: 10px;
+ font-family: 'Noto Serif JP', serif;
 }
 body {
  margin: 0 auto;
@@ -30,12 +30,11 @@ body {
  list-style: none;
  position: relative;
  flex: 1;
- border: 0px solid #045FB4;
+ min-width: 150px;
  background-color: #0064b5;
- width: 80%;
 }
 .gnav ul li:hover{
- background-color: steelblue;
+ background-color: #5094cc;
 }
 .gnav ul li a{
  display: block;
@@ -50,31 +49,38 @@ body {
  height: 0;
  overflow: hidden;
  transition: .5s;
- left: -15%;
- background-color: #5094cc;
+ left: 0;
 }
 .gnav ul li:hover > ul > li{
  height: 4rem;
  overflow: visible;
- width: 115%;
+ left: 0;
+ background-color: #5094cc;
+}
+.gnav ul li ul li:hover{
+ background-color: #63b9ff;
 }
 /* ----------ナビ孫階層---------- */
 .gnav ul li ul li ul{
- left: 95%;
+ left: 90%;
  position: absolute;
  top: 0;
- width: 80%;
+ width: 100%;
 }
-.gnav ul li ul li ul li{
- background-color: #63b9ff
+.gnav ul li:hover > ul > li > ul > li{
+ background-color: #63b9ff;
+}
+.gnav ul li:hover > ul > li > ul > li:hover{
+ background-color: #99d1ff;
 }
 /* ----------MENUタブ---------- */
 .gnav > ul > li:nth-child(7){
  background-color: #b50064;
+ flex: 0 0 30px;
 }
 .gnav > ul > li:nth-child(7) > ul > li{
  left: -20%;
- background-color: #b52474
+ background-color: #b52474;
 }
 /* ----------タイトル---------- */
 h1{
@@ -83,6 +89,7 @@ h1{
  margin: 0;
  padding: 100px 300px;
  height: 100px;
+ min-width: 360px;
 }
 h1 a{
  color: brown;
@@ -92,7 +99,7 @@ h1 a{
 }
 /* ----------グローバル設定---------- */
 p, li {
- font-size: 20px;    
+ font-size: 13px;    
  line-height: 4rem;
  letter-spacing: 3px;
 }
